@@ -1,0 +1,4 @@
+# Normalise line endings: the repo stores LF, Windows checkouts may use CRLF for scripts.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf

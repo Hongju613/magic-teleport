@@ -1,0 +1,228 @@
+# MagicTeleport language file (en_US)
+# Edit messages here and run /magicteleport reload to apply.
+# Placeholders are {0} {1} ...; keep their meaning when translating.
+
+general:
+  no-permission: '&cYou do not have permission for this command.'
+  player-only: '&cThis command can only be used by players.'
+  not-a-number: '&c{0} must be an integer (got: {1}).'
+  not-a-bool: '&cArgument must be true or false.'
+  world-not-found: '&cWorld not found: {0}'
+  unknown-subcommand: '&eUnknown admin subcommand: {0}'
+  field-amount: 'amount'
+  field-seconds: 'seconds'
+  field-price: 'price'
+  field-level: 'level'
+  field-coord: 'coordinate'
+  field-x: 'x'
+  field-y: 'y'
+  field-z: 'z'
+  toggle-on: 'on'
+  toggle-off: 'off'
+  enabled: 'enabled'
+  disabled: 'disabled'
+  word-yes: 'yes'
+  word-no: 'no'
+  reloading: 'configuration reload'
+  plugin-disabled: 'plugin disabled'
+
+state:
+  allow-others: '&aallows other players'
+  owner-only: '&conly allows the owner'
+
+help:
+  header: '&d===== Magic Teleport ====='
+  player:
+    - '&f/magicteleport &7open the manager GUI'
+    - '&f/magicteleport add &7binding mode (right-click two cores with a stick)'
+    - '&f/magicteleport delete|items|container|buy|info'
+    - '&f/magicteleport setallow <id> <true|false>'
+  admin:
+    - '&f/magicteleport amount <n>|time <sec>|sell|price|charge|vipallow <true|false>'
+    - '&f/magicteleport vipamount <level> <n>|createallow <true|false> [world]|block <block>'
+    - '&f/magicteleport template set [world x y z]|admin create|admin validate|admin container|reload'
+
+channel:
+  none: '&cYou do not own any tunnel yet. Use &f/magicteleport add &cto create one.'
+  none-info: '&7You do not own any tunnel yet. Use &f/magicteleport add &7to create one.'
+  not-found: '&cNo tunnel #{0} that belongs to you.'
+  multi-hint: '&eYou own multiple tunnels, please pass the id: {0}'
+  info-header: '&eYour tunnels ({0}/{1}):'
+  info-line: ' &d#{0} &f{1} &7({2} <-> {3}) {4}'
+
+buy:
+  disabled: '&cBuying extra tunnel slots is disabled on this server.'
+  no-economy: '&cNo economy found (Vault missing), cannot buy.'
+  prompt: '&eOne extra tunnel slot costs &6{0}&e. Type &f/magicteleport buy confirm&e to confirm.'
+  not-enough: '&cNot enough coins (need {0}).'
+  success: '&aPurchased! Your tunnel limit is now {0}.'
+
+setallow:
+  usage: '&eUsage: /magicteleport setallow <id> <true|false>'
+  result: '&aTunnel #{0} now {1}&a.'
+
+amount:
+  usage: '&eUsage: /magicteleport amount <n> (current {0})'
+  result: '&aDefault tunnel limit is now {0}.'
+  negative: '&cMust not be negative.'
+
+time:
+  usage: '&eUsage: /magicteleport time <seconds> (current {0}s)'
+  result: '&aCountdown is now {0} seconds.'
+  too-small: '&cCountdown must be at least 1 second.'
+
+sell:
+  usage: '&eUsage: /magicteleport sell <true|false> (current {0})'
+  result: '&aBuying slots is now {0}.'
+
+price:
+  usage: '&eUsage: /magicteleport price <coins> (current {0})'
+  result: '&aPrice of one extra slot is now {0} coins.'
+  negative: '&cMust not be negative.'
+
+charge:
+  usage: '&eUsage: /magicteleport charge <true|false> (current {0})'
+  result: '&aTunnel usage fee is now {0} (the owner always travels for free).'
+
+vipallow:
+  usage: '&eUsage: /magicteleport vipallow <true|false> (current {0})'
+  result: '&aVIP-only tunnel creation is now {0}.'
+  note: '&7Note: no VIP plugin is integrated (stub only). Enabling this blocks every non-VIP player from creating tunnels.'
+
+vipamount:
+  usage: '&eUsage: /magicteleport vipamount <level> <amount>'
+  result: '&aVIP level {0} tunnel quota set to {1} (active once a VIP system is wired up).'
+
+createallow:
+  usage: '&eUsage: /magicteleport createallow <true|false> [world]'
+  console-need-world: '&cFrom console please pass the world: /magicteleport createallow <true|false> <world>'
+  result: '&aWorld &f{0} &anow {1} tunnel creation.'
+  allowed: 'allows'
+  denied: 'forbids'
+
+block:
+  usage: '&eUsage: /magicteleport block <block> (current core {0})'
+  unknown: '&cUnknown block: {0}'
+  result: '&aCore block changed to {0}. Binding, validation and landing all follow this setting.'
+  note: '&7Note: structures built with the previous core block will no longer validate.'
+
+template:
+  usage-set-player: '&eUsage: /magicteleport template set &7(players: stand on the core block)'
+  usage-set-console: '&eOr:    /magicteleport template set <world> <x> <y> <z> (anchor = core block)'
+  console-need-world: '&cFrom console please pass every argument: /magicteleport template set <world> <x> <y> <z>'
+  current: '&7Current template: {0}'
+  anchor-not-core: '&cAnchor is not the core block (current core {0}, found {1}).'
+  recorded: '&aTemplate recorded: {0}.'
+  recorded-state: 'recorded'
+  none: 'not recorded'
+  describe: '{0} solid blocks (core {1}, crying obsidian {2}), {3} air'
+
+admin:
+  usage-create: '&eUsage: /magicteleport admin create <owner> <world> <x1 y1 z1> <x2 y2 z2>'
+  usage-validate: '&e     /magicteleport admin validate <world> <x> <y> <z>'
+  usage-container: '&e     /magicteleport admin container <id> <world> <x y z>'
+  args-missing-create: '&cMissing arguments: /magicteleport admin create <owner> <world> <x1 y1 z1> <x2 y2 z2>'
+  args-missing-container: '&cMissing arguments: /magicteleport admin container <id> <world> <x y z>'
+  args-missing-validate: '&cMissing arguments: /magicteleport admin validate <world> <x> <y> <z>'
+  no-template: '&cNo template recorded yet, run /magicteleport template set first.'
+  invalid-structure: '&cStructure {0} failed validation:'
+  detail-line: '&8  {0}'
+  same-structure: '&cThe two structures must be different.'
+  occupied: '&cThat structure already belongs to another tunnel.'
+  created: '&aTunnel #{0} created (owner {1}, allows others: {2}).'
+  channel-not-found: '&cTunnel not found: {0}'
+  not-container: '&cThat is not a chest or barrel (found {0}).'
+  container-set: '&aFee container for tunnel #{0} set to {1} {2},{3},{4}.'
+  valid: '&aStructure matches the template exactly.'
+  invalid-count: '&cStructure failed validation ({0} differences):'
+
+reload:
+  done: '&aReloaded. Tunnels: {0} | limit {1} | countdown {2}s | fee {3} | core {4} | template {5}'
+
+bind:
+  mode-off: '&7Left binding mode.'
+  mode-on: '&aBinding mode: right-click the &fcore block &aof the first structure with a &fstick &a(within 60 seconds).'
+  on-core-info: '&7Current core block: &f{0}&7. Run &f/magicteleport add &7again to leave binding mode.'
+  hint: '&7This is a core block. Run &f/magicteleport add &7to pair it with another structure.'
+  not-core: '&cThis is not the core block (current core: &f{0}&c).'
+  wrong-world: '&cTunnel creation is disabled in this world.'
+  invalid-structure: '&cStructure validation failed: it must match the standard pavilion exactly.'
+  already-used: '&cThis structure is already bound to tunnel #{0}.'
+  timeout-reset: '&7Your previous selection expired, pick the first structure again.'
+  first-selected: '&aFirst structure selected ({0} {1},{2},{3}). Now right-click the core block of the other structure.'
+  same-structure: '&cCannot pair a structure with itself.'
+  vip-only: '&cOnly VIP players may create tunnels on this server (VIP system not wired up).'
+  limit-reached: '&cTunnel limit reached ({0}/{1}).'
+  created: '&aTunnel created! Id &f#{0}&a. Run &f/magicteleport &ato open the manager GUI.'
+  default-name: "{0}'s tunnel"
+
+container:
+  select-hint: '&aLeft-click a &fchest or barrel &awith a &fstick &ato use it as the fee container (within 60 seconds).'
+  timeout: '&7Container selection expired, run /magicteleport container again.'
+  only: '&cOnly chests and barrels can be selected.'
+  gone: '&cThat tunnel no longer exists.'
+  set: '&aFee container for tunnel #{0} set to {1} {2},{3},{4}.'
+
+tp:
+  no-channel: '&7This structure is not bound to any tunnel yet.'
+  busy: '&7Teleport in progress...'
+  need-stand: '&7Stand on the core block to start the teleport.'
+  dest-world-missing: '&cDestination world is not loaded, cannot teleport now.'
+  dest-broken: '&cThe destination structure has been destroyed.'
+  start: '&5Teleport started, arriving in &d{0} &5seconds. Stay on the structure!'
+  cancelled-left: '&cTeleport cancelled: you left the structure.'
+  no-permission: '&cYou are not allowed to pass through this tunnel.'
+  insufficient: '&cYou do not have the required items or coins to pass.'
+  arrived: '&aArrived at the other end!'
+  cancel-all: '&cTeleport cancelled: {0}'
+
+gui:
+  title-main: '§8§lMAGIC TELEPORT'
+  title-fee: '§8§lFee items (close to save)'
+  title-confirm: '§8§lDelete this tunnel?'
+  border: '§8▉'
+  button-add-name: '§aNew tunnel'
+  button-add-lore:
+    - '§7Run /magicteleport add first'
+    - '§7then right-click both cores with a stick'
+  button-delete-name: '§cDelete tunnel'
+  button-delete-lore:
+    - '§7Pick a tunnel from the list'
+    - '§7you will be asked to confirm'
+  button-items-name: '§eFee items'
+  button-items-lore:
+    - '§7Put the items you want to charge'
+    - '§7into the menu (max 64 of each)'
+  button-container-name: '§eFee container'
+  button-container-lore:
+    - '§7Left-click a chest/barrel with a stick'
+    - '§7collected items go there'
+  button-buy-name: '§6Buy tunnel slots'
+  button-buy-lore:
+    - '§7Buy extra tunnel slots with coins'
+  channel-name: '§dTunnel #{0} §f{1}'
+  channel-a: '§7A §f{0} ({1},{2},{3})'
+  channel-b: '§7B §f{0} ({1},{2},{3})'
+  channel-allow: '§7Allows others: {0}'
+  channel-fee-none: '§7Fee: §8none'
+  channel-fee-items: '§7Fee: {0}'
+  channel-fee-money: '§6{0} coins'
+  channel-container-yes: '§7Container: §aset'
+  channel-container-no: '§7Container: §cnot set'
+  channel-sep: '§8§m                    '
+  channel-hint-toggle: '§8Click to toggle "allows others"'
+  channel-hint-delete: '§cClick to delete this tunnel'
+  delete-prompt: '&eClick the tunnel you want to delete (you will be asked to confirm).'
+  toggle-result: '&aTunnel #{0} now {1}&a.'
+  fee-hint: '&7Put the items you want to charge into the menu (max 64 of each), close to save; empty = free.'
+  fee-multi-items: '&eYou own multiple tunnels, use &f/magicteleport items <id>&e.'
+  fee-multi-container: '&eYou own multiple tunnels, use &f/magicteleport container <id>&e.'
+  confirm-yes: '§c§lDELETE'
+  confirm-yes-lore: '§7Tunnel #{0} {1}'
+  confirm-no: '§aCancel'
+  deleted: '&aTunnel #{0} deleted.'
+
+fee:
+  cleared: '&aFee items cleared (free passage).'
+  saved: '&aFee items saved: {0}'
+  paid: '&7Tunnel fee paid.'

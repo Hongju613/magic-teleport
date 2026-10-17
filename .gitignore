@@ -1,0 +1,20 @@
+# build outputs (Maven + the optional javac script)
+target/
+build/
+build_log.txt
+*.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

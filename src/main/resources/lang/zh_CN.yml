@@ -1,0 +1,228 @@
+# MagicTeleport 中文语言文件（zh_CN）
+# 想改提示语直接改这里，保存后 /magicteleport reload 生效。
+# 占位符用 {0} {1} …，不要动它们的顺序含义。
+
+general:
+  no-permission: '&c你没有权限使用这个命令。'
+  player-only: '&c这个命令只能玩家使用。'
+  not-a-number: '&c{0} 必须是整数（收到：{1}）。'
+  not-a-bool: '&c参数需要 true 或 false。'
+  world-not-found: '&c找不到世界 {0}'
+  unknown-subcommand: '&e未知的 admin 子命令：{0}'
+  field-amount: '数量'
+  field-seconds: '秒数'
+  field-price: '价格'
+  field-level: '等级'
+  field-coord: '坐标'
+  field-x: 'x'
+  field-y: 'y'
+  field-z: 'z'
+  toggle-on: '开'
+  toggle-off: '关'
+  enabled: '开启'
+  disabled: '关闭'
+  word-yes: '是'
+  word-no: '否'
+  reloading: '配置重载'
+  plugin-disabled: '插件卸载'
+
+state:
+  allow-others: '&a允许他人使用'
+  owner-only: '&c只允许你使用'
+
+help:
+  header: '&d===== 魔法传送 ====='
+  player:
+    - '&f/magicteleport &7打开管理界面'
+    - '&f/magicteleport add &7绑定模式（木棍右键两个核心方块）'
+    - '&f/magicteleport delete|items|container|buy|info'
+    - '&f/magicteleport setallow <编号> <true|false>'
+  admin:
+    - '&f/magicteleport amount <n>|time <秒>|sell|price|charge|vipallow <true|false>'
+    - '&f/magicteleport vipamount <等级> <n>|createallow <true|false> [世界]|block <方块>'
+    - '&f/magicteleport template set [世界 x y z]|admin create|admin validate|admin container|reload'
+
+channel:
+  none: '&c你还没有隧道。输入 &f/magicteleport add &c创建。'
+  none-info: '&7你还没有隧道。输入 &f/magicteleport add &7创建。'
+  not-found: '&c找不到编号 {0} 的通道（或不属于你）。'
+  multi-hint: '&e你有多个通道，请带编号：{0}'
+  info-header: '&e你的隧道（{0}/{1}）：'
+  info-line: ' &d#{0} &f{1} &7({2} ⇄ {3}) {4}'
+
+buy:
+  disabled: '&c服务器未开放购买通道上限。'
+  no-economy: '&c未检测到经济系统（Vault），无法购买。'
+  prompt: '&e购买 1 个通道上限需要 &6{0} 金币&e。确认请输入 &f/magicteleport buy confirm&e。'
+  not-enough: '&c金币不足（需要 {0}）。'
+  success: '&a购买成功！当前通道上限：{0}。'
+
+setallow:
+  usage: '&e用法：/magicteleport setallow <编号> <true|false>'
+  result: '&a隧道 #{0} 现在{1}&a。'
+
+amount:
+  usage: '&e用法：/magicteleport amount <n>（当前 {0}）'
+  result: '&a玩家通道上限已改为 {0}。'
+  negative: '&c不能小于 0。'
+
+time:
+  usage: '&e用法：/magicteleport time <秒>（当前 {0}s）'
+  result: '&a传送读秒已改为 {0} 秒。'
+  too-small: '&c读秒不能小于 1。'
+
+sell:
+  usage: '&e用法：/magicteleport sell <true|false>（当前 {0}）'
+  result: '&a金币购买上限已{0}。'
+
+price:
+  usage: '&e用法：/magicteleport price <金币>（当前 {0}）'
+  result: '&a购买一个上限的价格已改为 {0} 金币。'
+  negative: '&c不能小于 0。'
+
+charge:
+  usage: '&e用法：/magicteleport charge <true|false>（当前 {0}）'
+  result: '&a隧道使用收费已{0}（主人自己永远免费）。'
+
+vipallow:
+  usage: '&e用法：/magicteleport vipallow <true|false>（当前 {0}）'
+  result: '&a仅VIP可建已{0}。'
+  note: '&7注意：VIP 系统尚未接入（只留接口），开启后普通玩家将无法创建隧道。'
+
+vipamount:
+  usage: '&e用法：/magicteleport vipamount <等级> <数量>'
+  result: '&aVIP {0} 级通道额度已设为 {1}（VIP 系统接入后生效）。'
+
+createallow:
+  usage: '&e用法：/magicteleport createallow <true|false> [世界]'
+  console-need-world: '&c控制台请指明世界：/magicteleport createallow <true|false> <世界>'
+  result: '&a世界 &f{0} &a现在{1}创建隧道。'
+  allowed: '允许'
+  denied: '禁止'
+
+block:
+  usage: '&e用法：/magicteleport block <方块>（当前核心 {0}）'
+  unknown: '&c未知方块：{0}'
+  result: '&a核心方块已改为 {0}。绑定/校验/落点都会跟随这个配置。'
+  note: '&7注意：已按旧核心方块建成的结构将不再通过校验。'
+
+template:
+  usage-set-player: '&e用法：/magicteleport template set &7（玩家：站在核心方块上）'
+  usage-set-console: '&e或     /magicteleport template set <世界> <x> <y> <z>（锚点=核心方块）'
+  console-need-world: '&c控制台请给全参数：/magicteleport template set <世界> <x> <y> <z>'
+  current: '&7当前模板：{0}'
+  anchor-not-core: '&c锚点不是核心方块（当前核心 {0}，那里是 {1}）。'
+  recorded: '&a模板已录制：{0}。'
+  recorded-state: '已录制'
+  none: '未录制'
+  describe: '实心 {0} 格（核心 {1}、哭泣黑曜石 {2}）空气 {3} 格'
+
+admin:
+  usage-create: '&e用法：/magicteleport admin create <主人> <世界> <x1 y1 z1> <x2 y2 z2>'
+  usage-validate: '&e     /magicteleport admin validate <世界> <x> <y> <z>'
+  usage-container: '&e     /magicteleport admin container <编号> <世界> <x y z>'
+  args-missing-create: '&c参数不足：/magicteleport admin create <主人> <世界> <x1 y1 z1> <x2 y2 z2>'
+  args-missing-container: '&c参数不足：/magicteleport admin container <编号> <世界> <x y z>'
+  args-missing-validate: '&c参数不足：/magicteleport admin validate <世界> <x> <y> <z>'
+  no-template: '&c服务器还没有录制模板，先 /magicteleport template set。'
+  invalid-structure: '&c结构 {0} 校验未通过：'
+  detail-line: '&8  {0}'
+  same-structure: '&c两个结构不能是同一个。'
+  occupied: '&c结构已被其它隧道占用。'
+  created: '&a已创建隧道 #{0}（主人 {1}，允许他人：{2}）。'
+  channel-not-found: '&c找不到通道 {0}'
+  not-container: '&c那里不是箱子/木桶（是 {0}）。'
+  container-set: '&a已设置隧道 #{0} 的收取容器（{1} {2},{3},{4}）。'
+  valid: '&a结构校验通过（与模板完全一致）。'
+  invalid-count: '&c结构校验未通过（{0} 处不同）：'
+
+reload:
+  done: '&a已重载。通道 {0} 条 | 上限 {1} | 读秒 {2}s | 收费 {3} | 核心 {4} | 模板 {5}'
+
+bind:
+  mode-off: '&7已退出绑定模式。'
+  mode-on: '&a已进入绑定模式：请用 &f木棍 &a右键第一个结构的 &f核心方块 &a（60 秒内完成）。'
+  on-core-info: '&7当前核心方块：&f{0}&7。再输入一次 &f/magicteleport add &7可退出。'
+  hint: '&7这是核心方块：输入 &f/magicteleport add &7可把它与另一个结构绑定成隧道。'
+  not-core: '&c这不是核心方块（当前核心：&f{0}&c）。'
+  wrong-world: '&c这个世界禁止创建隧道。'
+  invalid-structure: '&c结构校验未通过：必须与标准亭子完全一致（差一格都不认）。'
+  already-used: '&c这个结构已经绑定到隧道 #{0} 了。'
+  timeout-reset: '&7上次的选择已超时，请重新选择第一个结构。'
+  first-selected: '&a已选中第一个结构（{0} {1},{2},{3}），请用木棍右键另一个结构的核心方块。'
+  same-structure: '&c不能与同一个结构配对。'
+  vip-only: '&c本服只允许 VIP 创建隧道（VIP 系统尚未接入）。'
+  limit-reached: '&c通道数量已达上限（{0}/{1}）。'
+  created: '&a隧道创建成功！编号 &f#{0}&a。输入 &f/magicteleport &a打开管理界面。'
+  default-name: '{0}的隧道'
+
+container:
+  select-hint: '&a请用 &f木棍 &a左键一个 &f箱子/木桶 &a作为收费容器（60 秒内）。'
+  timeout: '&7容器选择已超时，请重新 /magicteleport container。'
+  only: '&c只能选择箱子/木桶。'
+  gone: '&c这条通道已经不存在了。'
+  set: '&a已设置隧道 #{0} 的收取容器（{1} {2},{3},{4}）。'
+
+tp:
+  no-channel: '&7这个结构还没有绑定隧道。'
+  busy: '&7传送读秒中…'
+  need-stand: '&7请站在核心方块上开始传送。'
+  dest-world-missing: '&c目标世界未加载，暂时无法传送。'
+  dest-broken: '&c目标结构已被破坏。'
+  start: '&5传送开始，&d{0} &5秒后到达…请勿离开结构。'
+  cancelled-left: '&c传送已取消：离开了结构。'
+  no-permission: '&c你没有权限进行隧穿'
+  insufficient: '&c你的材料或金币不足，无法隧穿。'
+  arrived: '&a已到达隧道另一端！'
+  cancel-all: '&c传送已取消：{0}'
+
+gui:
+  title-main: '§8§l魔 法 传 送'
+  title-fee: '§8§l隧道收费物品（关闭即保存）'
+  title-confirm: '§8§l确认删除？'
+  border: '§8▉'
+  button-add-name: '§a新增通道'
+  button-add-lore:
+    - '§7先 /magicteleport add 进入绑定模式'
+    - '§7再用木棍右键两个结构的核心方块'
+  button-delete-name: '§c删除通道'
+  button-delete-lore:
+    - '§7点击后选择要删除的通道'
+    - '§7会再弹一次确认'
+  button-items-name: '§e物品设置'
+  button-items-lore:
+    - '§7把收费物品放进界面'
+    - '§7每种最多 1 组（64）'
+  button-container-name: '§e收费容器'
+  button-container-lore:
+    - '§7用木棍左键箱子/木桶'
+    - '§7收来的物品直接进这里'
+  button-buy-name: '§6购买上限'
+  button-buy-lore:
+    - '§7用金币买更多通道额度'
+  channel-name: '§d隧道 #{0} §f{1}'
+  channel-a: '§7A §f{0} ({1},{2},{3})'
+  channel-b: '§7B §f{0} ({1},{2},{3})'
+  channel-allow: '§7允许他人：{0}'
+  channel-fee-none: '§7收费：§8无'
+  channel-fee-items: '§7收费：{0}'
+  channel-fee-money: '§6{0} 金币'
+  channel-container-yes: '§7容器：§a已设'
+  channel-container-no: '§7容器：§c未设'
+  channel-sep: '§8§m                    '
+  channel-hint-toggle: '§8点击切换「允许他人」'
+  channel-hint-delete: '§c点击删除这条通道'
+  delete-prompt: '&e点击要删除的通道（会再弹一次确认）。'
+  toggle-result: '&a隧道 #{0} 现在{1}&a。'
+  fee-hint: '&7把要收的物品放进界面（每种最多 1 组），关闭后保存；清空 = 免费。'
+  fee-multi-items: '&e你有多个通道，请输入 &f/magicteleport items <编号>&e。'
+  fee-multi-container: '&e你有多个通道，请输入 &f/magicteleport container <编号>&e。'
+  confirm-yes: '§c§l确认删除'
+  confirm-yes-lore: '§7隧道 #{0} {1}'
+  confirm-no: '§a取消'
+  deleted: '&a已删除隧道 #{0}。'
+
+fee:
+  cleared: '&a收费物品已清空（免费通行）。'
+  saved: '&a收费物品已保存：{0}'
+  paid: '&7已支付隧道通行费。'

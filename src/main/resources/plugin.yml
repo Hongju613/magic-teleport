@@ -1,0 +1,20 @@
+name: MagicTeleport
+version: '1.0.0'
+main: com.magictunnels.MagicTeleport
+api-version: '1.21'
+author: DeepSeek
+description: Magic teleport tunnels - bind two 3x3x6 pavilions with a stick and travel between them with a countdown and purple spiral particles
+softdepend:
+  - Vault
+commands:
+  magicteleport:
+    description: Open the tunnel manager GUI (or use a subcommand)
+    usage: /magicteleport <add|delete|items|container|buy|info|setallow|amount|time|sell|price|charge|vipallow|vipamount|createallow|block|template|admin|reload>
+    aliases: [tunnel]
+permissions:
+  magicteleport.use:
+    description: 使用传送与绑定
+    default: true
+  magicteleport.admin:
+    description: 管理魔法传送（OP）
+    default: op

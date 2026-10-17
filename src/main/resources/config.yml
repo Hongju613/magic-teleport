@@ -1,0 +1,5 @@
+# MagicTeleport 主配置
+#
+# lang: 提示语语言。内置 en_US / zh_CN，文件在 plugins/MagicTeleport/lang/ 下
+#       （可以直接改，也可以复制一份自己的语言文件；改完 /magicteleport reload 生效）
+lang: en_US
